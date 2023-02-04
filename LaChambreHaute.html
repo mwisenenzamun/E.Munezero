@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E.MUNEZERO</title>
+    <link rel="" href="">
+
+</head>
+
+<body>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+
+
+
+    <h1 id="bouti"> E.MUNEZERO </h1>
+
+
+    <div id="bouti1" class="navbar">
+
+        <div class="menu">
+            <div class=" nav-item "> <a href="acueil.html"> Accueil</a> </div>
+            <div class=" nav-item active"> <a href=""> Poemes</a> </div>
+        </div>
+
+    </div>
+    <button onclick="grand()"> mode Grand écran </button>
+    <div class="carousel">
+
+        <input type="radio" name="images" id="i1" checked>
+        <input type="radio" name="images" id="i2">
+        <input type="radio" name="images" id="i3">
+        <input type="radio" name="images" id="i4">
+        <input type="radio" name="images" id="i5">
+
+        <div class="slide_img" id="one">
+            <div class="texto" onclick="grand()">
+                <div class="slide_img" id="bout">
+                    <img id="slides1" src="LaChambreHaute/LaChambreHaute.png" alt="Images0">
+
+                </div>
+
+            </div>
+            <label for="i5" class="prev"></label>
+            <label for="i2" class="next"></label>
+        </div>
+        <div class="slide_img" id="two">
+            <img id="slides2" src="LaChambreHaute/LaChambreHaute2.png" alt="Image1">
+            <label for="i1" class="prev"></label>
+            <label for="i3" class="next"></label>
+        </div>
+        <div class="slide_img" id="three">
+            <img id="slides3" src="LaChambreHaute/LaChambreHaute3.png" alt="Image2">
+            <label for="i2" class="prev"></label>
+            <label for="i4" class="next"></label>
+        </div>
+
+        <div class="slide_img" id="four">
+            <img id="slides4" src="LaChambreHaute/LaChambreHaute4.png" alt="Image3">
+            <label for="i3" class="prev"></label>
+            <label for="i5" class="next"></label>
+        </div>
+        <div class="slide_img" id="five">
+            <img id="slides5" src="LaChambreHaute/LaChambreHaute5.png" alt="Image4">
+            <label for="i4" class="prev"></label>
+            <label for="i1" class="next"></label>
+        </div>
+
+
+
+
+        <div class="nav">
+            <label class="dots" id="dot1" for="i1"></label>
+            <label class="dots" id="dot2" for="i2"></label>
+            <label class="dots" id="dot3" for="i3"></label>
+            <label class="dots" id="dot4" for="i4"></label>
+            <label class="dots" id="dot5" for="i5"></label>
+        </div>
+
+
+    </div>
+
+
+    <div id="bouti2" class=" navbar foot">
+        <div class="footmenu">
+            <div class="nav-item"> <a href=""> Qui suis-je ?</a> </div>
+            <div class="nav-item"> <a href=""> Qui suis-je ?</a> </div>
+            <div class="nav-item"> <a href=""> Qui suis-je ?</a> </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="move.js"> </script>
+</body>
+
+</html>
