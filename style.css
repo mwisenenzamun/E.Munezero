@@ -587,7 +587,7 @@ span{
 .mobile-text {
   margin: 20px;
   margin-top: 50px;
-  width: 200px;
+  width: 150px;
   background-color: rgb(24, 23, 23);
   font-family: 'Antic Didone', serif;
   font-size: 15px;
@@ -618,7 +618,7 @@ span{
 @media (max-width: 800px) {
  
   .mobile img{
-    height: 200px;
+    height: 150px;
     /*clip-path: polygon(50% 0, 100% 0%, 50% 100%, 0% 100%);*/
     /*clip-path: polygon(25% 0%, 75% 0, 75% 100%, 25% 100%);*/
     margin-right: 15px;
