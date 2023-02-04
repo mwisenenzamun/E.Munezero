@@ -9,16 +9,32 @@ body{
     width: 100%;
     display: flex;
     flex-direction: column;
-    
+    justify-content: center;
     align-items: center;
+    
+   
    
 }
+
 
 .navib{
   display: flex ;
   flex-direction: row;
+  justify-content: right;
+  width: 100%;
  
 
+}
+@media  (max-width: 900px) {
+  .navib{
+    display: flex ;
+    flex-direction: column;
+    margin-left: 60%;
+    width: 30%;
+   
+  
+  }
+  
 }
 
 /*logo*/
@@ -57,13 +73,13 @@ h1{
 /* navbar*/
 .navbar{
   display: flex;
-  justify-content: center;
+  justify-content: right;
   border-bottom: solid 1px white;
   margin-top: 15px;
-  margin-left: 60px;
+  
     
   box-sizing: content-box;
-  border-top: 10%;
+  
   box-decoration-break: 10px white;
   
   opacity: 0.75;
@@ -105,7 +121,7 @@ h1{
 
 .active{
     box-sizing: content-box;
-    border-color: white;
+    border-color: rgb(131, 77, 77);
 }
 
 
@@ -121,9 +137,9 @@ h1{
     display:flex;
     justify-content: center;
     
-    font-size: 25px;
+    font-size: 20px;
     margin-right: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     
     height: 40px;
     
@@ -280,6 +296,21 @@ span{
 
 }
 
+@media  (max-width: 600px) {
+  .acueil{
+    display: flex;
+    flex-direction:column-reverse;
+    flex-wrap: nowrap;
+    justify-content: right;
+    
+    width: 100%;
+    
+    
+  
+  }
+  
+}
+
 .poesie{
   
   display: flex;
@@ -294,6 +325,16 @@ span{
 .poemes{
   display: flex;
   width: 80%;
+}
+
+@media (max-width: 1200px) {
+
+  .poemes{
+    display: flex;
+    width: 100%;
+  }
+  
+
 }
 .pi {
   display: none;
@@ -422,12 +463,28 @@ span{
 
 
 .gauche{
-  margin: 200px;
+  display: flex;
+  margin: 0px;
  
 }
 
 .gauche p{
-  margin: 40px;
+  margin-left: 20px;
+ 
+
+}
+
+@media (max-width: 668px) {
+  .gauche p{
+    margin-left: 20px;
+    width: 40%;
+  
+  }
+}
+
+.gauche h1{
+  margin-left: 20px;
+  margin-top: 300px;
  
   
  
@@ -452,6 +509,43 @@ span{
 
 
 
+
+@media (max-width: 1800px) {
+  .droite{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    width: 100%;
+    margin: 5%;
+    
+   
+  }
+
+
+}
+@media (max-width: 800px) {
+  .droite{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    margin-top: 260px;
+    
+   
+  }
+  .gauche{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+   
+  }
+
+
+}
+
+
+
+
+
 /* poemes*/
 .boxi{
     
@@ -466,6 +560,15 @@ span{
     border: red;
     
 }
+.times{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+
+
 
 .mobile {
   display: flex;
@@ -687,7 +790,7 @@ span{
 
 .timeline {
   position: relative;
-  width: 400px;
+  width: 60%;
   max-width: 500px;
   margin: 0 auto;
   padding: 20px 40px;
@@ -709,8 +812,30 @@ span{
 .timeline article {
   position: relative;
   background: #eeeeee;
-  width: calc( 50% - 40px );
-  padding: 15px;
+  width: calc( 70% - 110px );
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+
+  .timeline {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    /*background: #091A20;*/
+    float: left;
+  }
+
+  .timeline article {
+    position: relative;
+    background: #eeeeee;
+    width: calc( 70% - 110px );
+    padding: 10px;
+  }
+
+
 }
 .timeline article + article {
   margin-top: 20px;
@@ -781,6 +906,19 @@ span{
   margin-top: 40px;
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+@media (max-width: 1000px) {
+
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 500px;
+    margin-top: 40px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+
 }
 
 /* This container is needed to position the front and back side */
