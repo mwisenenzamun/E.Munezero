@@ -296,16 +296,16 @@ span{
   width: 80%;
 }
 .pi {
+  display: none;
   width: 10%;
-  
 
 }
 .po {
+  display: none;
   width: 12%;
   
-  
-
 }
+
 .po p{
   
   color: #000;
@@ -313,6 +313,21 @@ span{
 
 }
 
+
+
+@media  (min-width: 700px) {
+  .pi {
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .po {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+}
 
 .t1{
   background-image: url("photo5.jpeg") ;
@@ -475,6 +490,12 @@ span{
   font-size: 15px;
 }
 
+.mobile-text h2{
+  margin: 5px;
+  font-size: 20px;
+ 
+}
+
 
 
 
@@ -500,7 +521,14 @@ span{
     margin-right: 15px;
     
     border: red;
-}
+  }
+
+  .mobile {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    z-index: 99;
+  }
 }
 
 
