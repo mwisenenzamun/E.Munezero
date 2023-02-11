@@ -4,36 +4,20 @@
 
 
 
-body{
-    
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-   
-   
-}
 
 
 .navib{
   display: flex ;
   flex-direction: row;
-  justify-content: right;
+  justify-content: center;
   width: 100%;
  
 
 }
 @media  (max-width: 900px) {
-  .navib{
-    display: flex ;
-    flex-direction: column;
-    margin-left: 60%;
-    width: 30%;
-   
+
+
   
-  }
   
 }
 
@@ -75,7 +59,7 @@ h1{
   display: flex;
   justify-content: right;
   border-bottom: solid 1px white;
-  margin-top: 15px;
+  margin-top: 5px;
   
     
   box-sizing: content-box;
@@ -87,9 +71,8 @@ h1{
 
 
 .hi{
-  background-repeat: no-repeat;
-  background-size: cover;  
-  background-position: 60% 95%;
+  
+ 
   
 }
  .ho{
@@ -129,10 +112,10 @@ h1{
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  
-    
    
 }
+
+
 .nav-item{
     display:flex;
     justify-content: center;
@@ -142,9 +125,13 @@ h1{
     margin-bottom: 20px;
     
     height: 40px;
-    
-    
+      
+}
 
+
+.nav-item a{
+  
+  color: #247e72;  
 }
 
 
@@ -220,22 +207,17 @@ h2{
   word-wrap: px;
 }
 
+
+.intro{
+
+  width: 100%;
+}
+
 .pa {
   width: 40%;
   
 
 }
-
-.signature h3{
-  color: #FFFFFF;
-  font-family: 'Italianno';
-  font-size: 20px;
-  
-}
-
-
-
-
 
 .pa p{
   margin-top: 10px;
@@ -246,6 +228,29 @@ h2{
   
 
 }
+
+@media  (max-width: 600px) {
+  
+  .pa {
+    width: 80%;
+  }
+
+
+  .pa p{
+    background-color: #3e4653;
+    
+  
+  }
+}
+.signature h3{
+  color: #FFFFFF;
+  font-family: 'Italianno';
+  font-size: 20px;
+  
+}
+
+
+
 
 p {
     color: white;
@@ -485,15 +490,14 @@ span{
 
 @media (max-width: 668px) {
   .gauche p{
-    margin-left: 20px;
-    width: 40%;
+    
+    width: 80%;
   
   }
 
   .gauche h1{
     margin-left: 3px;
-    margin-top: 150px;
-
+    margin-top: 10px;
   }
   
 }
@@ -587,8 +591,8 @@ span{
 }
 
 .mobile p {
-  margin: 20px;
-  margin-top: 100px;
+  margin: 10px;
+  margin-top: 10px;
   
   font-size: 15px;
 }
@@ -604,7 +608,7 @@ span{
 
 .mobile-text h2{
   margin: 5px;
-  font-size: 20px;
+  font-size: 14px;
  
 }
 
@@ -627,7 +631,7 @@ span{
 @media (max-width: 800px) {
  
   .mobile img{
-    height: 150px;
+    height: 130px;
     /*clip-path: polygon(50% 0, 100% 0%, 50% 100%, 0% 100%);*/
     /*clip-path: polygon(25% 0%, 75% 0, 75% 100%, 25% 100%);*/
     margin-right: 15px;
@@ -640,6 +644,16 @@ span{
     flex-direction: column;
     width: fit-content;
     z-index: 99;
+  }
+
+
+  .mobile-text {
+  
+    margin-top: 5px;
+    width: 120px;
+    background-color: rgb(24, 23, 23);
+    font-family: 'Antic Didone', serif;
+    font-size: 15px;
   }
 }
 
@@ -741,6 +755,9 @@ span{
   
 }
 
+
+
+
 .projets{
   
   width: 80%;
@@ -792,6 +809,31 @@ span{
   }
 
 
+}
+
+@media (max-width: 700px) {
+ 
+  .projet{
+
+    margin-top: 50px;
+    border: solid 2px rgb(242, 242, 248);
+    
+    border-radius: 10px;
+    width: 90%;
+   
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+
+  .projets p{
+  
+    color: white;
+    
+    
+  
+  }
 }
 
 
@@ -917,18 +959,6 @@ span{
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
-@media (max-width: 1000px) {
-
-  .flip-card {
-   /* background-color:rgb(87, 145, 140);*/
-    width: 300px;
-    height: 500px;
-    margin-top: 40px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-
-}
 
 /* This container is needed to position the front and back side */
 .flip-card-inner {
@@ -967,12 +997,23 @@ span{
   border: solid black;
   color: rgb(15, 14, 14);
   transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 600px) {
+  .flip-card {
+    /* background-color:rgb(87, 145, 140);*/
+     width: 80%;
+     margin-left: 10%;
+     height: 600px;
+     margin-top: 40px;
+     border: 1px solid #f1f1f1;
+     perspective: 1000px; /* Remove this if you don't want the 3D effect */
+   }
 
   .flip-card-front {
-    background-color:rgb(151, 156, 102);
+    background-color:rgb(87, 145, 140);
     opacity: 0.9;
     color: rgb(7, 6, 6);
     display: flex;
@@ -981,7 +1022,7 @@ span{
   
   
   .flip-card-back {
-    background-color:rgb(87, 145, 140);
+    background-color:rgb(151, 156, 102);
     opacity: 0.9;
     border: solid black;
     color: rgb(15, 14, 14);
