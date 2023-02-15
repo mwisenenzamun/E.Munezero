@@ -626,8 +626,6 @@ span{
     border: red;
 }
 
-
-
 @media (max-width: 800px) {
  
   .mobile img{
@@ -641,7 +639,7 @@ span{
 
   .mobile {
     display: flex;
-    flex-direction: column;
+    
     width: fit-content;
     z-index: 99;
   }
@@ -656,6 +654,8 @@ span{
     font-size: 15px;
   }
 }
+
+
 
 
 
@@ -880,10 +880,22 @@ span{
   }
 
   .timeline article {
-    position: relative;
+    position:relative;
     background: #eeeeee;
-    width: calc( 70% - 110px );
+    width: calc( 100% - 0% );
     padding: 10px;
+  }
+
+  .timeline:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 50%;
+    width: 3px;
+    background: #4cafa2;
+    border-radius: 3px;
+    z-index: -1;
   }
 
 
@@ -947,6 +959,21 @@ span{
   color: #346abf;
 }
 
+@media (max-width: 600px) {
+
+  .timeline article:nth-child(even) {
+    margin-left: calc( 0%  );
+  }
+
+  .timeline article:before {
+    display: none;
+  }
+  .timeline article:after {
+    display: none;
+
+  }
+}
+
 
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -1001,12 +1028,12 @@ span{
   flex-direction: column;
 }
 
-@media (max-width: 600px) {
+ @media (max-width: 600px) {
   .flip-card {
     /* background-color:rgb(87, 145, 140);*/
      width: 80%;
      margin-left: 10%;
-     height: 600px;
+     height: 700px;
      margin-top: 40px;
      border: 1px solid #f1f1f1;
      perspective: 1000px; /* Remove this if you don't want the 3D effect */
