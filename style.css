@@ -232,15 +232,16 @@ h2{
 @media  (max-width: 600px) {
   
   .pa {
+    display:none;
     width: 80%;
   }
-
-
-  .pa p{
-    background-color: #3e4653;
+  .intro{
+    display:none;
     
-  
   }
+
+
+  
 }
 .signature h3{
   color: #FFFFFF;
@@ -442,7 +443,7 @@ span{
   letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
-  color: #000;
+  color: rgb(78, 151, 151);
   cursor: pointer;
   border: 3px solid;
   padding: 0.25em 0.5em;
@@ -470,6 +471,8 @@ span{
 .gauche{
   display: flex;
   margin: 0px;
+  
+  
  
 }
 
@@ -494,6 +497,11 @@ span{
     width: 80%;
   
   }
+  .gauche {
+    
+    width: 50%;
+  
+  }
 
   .gauche h1{
     margin-left: 3px;
@@ -508,15 +516,21 @@ span{
 .droite{
   display: flex;
   flex-direction: column;
-  margin: 20%;
-  margin-top: 160px;
   
- 
+  width: 100%;
+  margin-top: 160px;
 }
 .droite img{
   width: 50px;
   margin: 5px;
   margin-top: 10px;
+ 
+}
+
+.droite a{
+  width: fit-content;
+ 
+  
  
 }
 
@@ -528,8 +542,8 @@ span{
     display: flex;
     flex-direction: column;
     justify-content: right;
-    width: 100%;
-    margin: 5%;
+    
+    
     
    
   }
@@ -543,6 +557,7 @@ span{
     margin: 5%;
     margin-top: 60px;
     
+    
    
   }
   .gauche{
@@ -555,6 +570,17 @@ span{
 
 }
 
+@media (min-width: 768px) {
+  .droite{
+    
+    width: 50%;
+    
+   
+  }
+  .gauche{
+    width: 50%;
+  }
+}
 
 
 
@@ -598,9 +624,9 @@ span{
 }
 
 .mobile-text {
-  margin: 20px;
+  margin: 10px;
   margin-top: 50px;
-  width: 120px;
+  width: 220px;
   background-color: rgb(24, 23, 23);
   font-family: 'Antic Didone', serif;
   font-size: 15px;
@@ -620,7 +646,7 @@ span{
     height: 240px;
     /*clip-path: polygon(50% 0, 100% 0%, 50% 100%, 0% 100%);*/
     /*clip-path: polygon(25% 0%, 75% 0, 75% 100%, 25% 100%);*/
-    margin-right: 15px;
+    margin-right: 10px;
     
     
     border: red;
@@ -632,7 +658,7 @@ span{
     height: 130px;
     /*clip-path: polygon(50% 0, 100% 0%, 50% 100%, 0% 100%);*/
     /*clip-path: polygon(25% 0%, 75% 0, 75% 100%, 25% 100%);*/
-    margin-right: 15px;
+    margin-right: 10px;
     
     border: red;
   }
@@ -648,18 +674,12 @@ span{
   .mobile-text {
   
     margin-top: 5px;
-    width: 120px;
+    width: 160px;
     background-color: rgb(24, 23, 23);
     font-family: 'Antic Didone', serif;
     font-size: 15px;
   }
 }
-
-
-
-
-
-
 
 
 
@@ -769,27 +789,35 @@ span{
 .projets p{
   
   color: #091A20;
-  
-  
-
+  font-size: 10px;
 }
 
 
 
 .projet-1{
-  
-  width: 35%;
+
+  width: 50%;
   float: right;
   text-align: right;
-  
 
 }
 
 .projet-2{
-  width: 65%;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  text-align: left;
 
+}
+
+.projet-2 p{
+  
+  text-align: left;
+
+}
+.projet-1 p{
+
+color: #000;
 }
 
 @media (max-width: 1200px) {
@@ -803,7 +831,7 @@ span{
     width: 55%;
     
     display: flex;
-    align-items: center;
+    
     flex-direction: column;
     
   }
@@ -827,13 +855,18 @@ span{
     
   }
 
-  .projets p{
+  .projet-2 p{
   
-    color: white;
-    
-    
+    color: #ffffff;
+  }
+
+
+  .projet-2 a{
+    width: 80%;
   
   }
+
+
 }
 
 
@@ -931,6 +964,7 @@ span{
 .timeline article:nth-child(even) {
   margin-left: calc( 50% + 48px );
 }
+
 .timeline article:nth-child(even):before {
   left: auto;
   right: calc( 100% + 26px );
@@ -980,7 +1014,7 @@ span{
 .flip-card {
   background-color: transparent;
   width: 400px;
-  height: 500px;
+  height: 600px;
   margin-top: 40px;
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
@@ -992,7 +1026,7 @@ span{
   position: relative;
   width: 100%;
   height: 100%;
-  text-align: center;
+  text-align: left;
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
@@ -1026,6 +1060,17 @@ span{
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
+  text-align: left;
+}
+
+.flip-card h2{
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.flip-card h3{
+  font-size: 13px;
+  margin-top: 30px;
 }
 
  @media (max-width: 600px) {
@@ -1033,18 +1078,22 @@ span{
     /* background-color:rgb(87, 145, 140);*/
      width: 80%;
      margin-left: 10%;
-     height: 700px;
+     height: 800px;
      margin-top: 40px;
      border: 1px solid #f1f1f1;
      perspective: 1000px; /* Remove this if you don't want the 3D effect */
+     text-align: left;
+     
    }
 
   .flip-card-front {
     background-color:rgb(87, 145, 140);
+    height: 800px;
     opacity: 0.9;
     color: rgb(7, 6, 6);
     display: flex;
     flex-direction: column;
+   
   }
   
   
@@ -1054,13 +1103,25 @@ span{
     border: solid black;
     color: rgb(15, 14, 14);
     transform: rotateY(180deg);
+    
+  }
+
+  .flip-card h2{
+    font-size: 16px;
+    margin-top: 70px;
+  
+    
+  
+  
   }
 
 }
 
 .cardtext{
 
-  margin: 20px;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
   
 }
 
@@ -1070,6 +1131,7 @@ span{
   font-family: 'Courier New', Courier, monospace;
   
 }
+
 
 
 
