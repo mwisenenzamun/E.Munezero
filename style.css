@@ -174,20 +174,17 @@ text-decoration: underline white;
   border-top: 10%;
   box-decoration-break: 10px white;
   
-  font-size: 20px;
+  font-size: 30px;
   
   
   opacity: 0.75;  
 }
 
-.footmenu{
+.footmenu {
+  margin: 40px;
   display: flex;
-  
-  }
-.footmenu img{
-  width:30px ;
-  height: 30px;
-  margin-top: 30px;
+  justify-content: center;
+  font-size: 30px;
 }
 
 /** lien et texte**/
@@ -210,12 +207,13 @@ h2{
 
 
 .intro{
+  
 
-  width: 100%;
+  width: 22%;
 }
 
 .pa {
-  width: 40%;
+  width: 60%;
   
 
 }
@@ -230,13 +228,18 @@ h2{
 
 }
 
-@media  (max-width: 600px) {
+@media  (max-width: 800px) {
   
   .pa {
     display:none;
     width: 80%;
   }
   .intro{
+    display:none;
+    
+  }
+
+  .gauche{
     display:none;
     
   }
@@ -296,6 +299,8 @@ span{
   justify-content: center;
   align-items: center;
   width: 80%;
+  margin-top: 40px;
+  margin-bottom: 50px;
 }
 
 .acueil2 {
@@ -314,7 +319,7 @@ span{
     flex-wrap: nowrap;
     justify-content: right;
     
-    width: 100%;
+    width: 75%;
     
   }
   
@@ -439,7 +444,7 @@ span{
 
 
 
-/* CSS */
+/* E.MUNEZERO*/
 .button-54 {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -462,6 +467,9 @@ span{
   top: 5px;
   left: 5px;
 }
+.button-54:hover {
+ color: #0f0f0f;
+}
 
 @media (min-width: 768px) {
   .button-54 {
@@ -477,7 +485,7 @@ span{
   letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
-  color: rgb(68, 92, 63);
+  color: rgb(64, 143, 49);
   cursor: pointer;
   border: 3px solid;
   padding: 0.25em 0.5em;
@@ -493,9 +501,46 @@ span{
   top: 5px;
   left: 5px;
 }
+.button-55:hover {
+  color: #0f0f0f;
+ }
 
 @media (min-width: 768px) {
   .button-55 {
+    padding: 0.25em 0.75em;
+  }
+}
+
+/* POESIE */
+
+.button-56 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(143, 79, 49);
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-56:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+.button-56:hover {
+  color: #a88787;
+ }
+
+@media (min-width: 768px) {
+  .button-56 {
     padding: 0.25em 0.75em;
   }
 }
@@ -505,10 +550,10 @@ span{
 
 
 
-
 .gauche{
   display: flex;
   margin: 0px;
+  
   
   
  
@@ -537,7 +582,7 @@ span{
   }
   .gauche {
     
-    width: 50%;
+    width: 40%;
   
   }
 
@@ -846,6 +891,8 @@ span{
 
 
 
+
+
 .projet-1{
 
   width: 50%;
@@ -919,6 +966,12 @@ color: #000;
   }
 
 
+}
+
+ .nana:hover{
+  
+  transform: scale(1.2);
+   
 }
 
 
@@ -1065,8 +1118,8 @@ color: #000;
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
-  width: 400px;
-  height: 600px;
+  width: 600px;
+  height: 250px;
   margin-top: 40px;
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
@@ -1128,9 +1181,9 @@ color: #000;
  @media (max-width: 600px) {
   .flip-card {
     /* background-color:rgb(87, 145, 140);*/
-     width: 80%;
+     width: 600px;
      margin-left: 10%;
-     height: 800px;
+     height: 300px;
      margin-top: 40px;
      border: 1px solid #f1f1f1;
      perspective: 1000px; /* Remove this if you don't want the 3D effect */
@@ -1140,7 +1193,7 @@ color: #000;
 
   .flip-card-front {
     background-color:rgb(87, 145, 140);
-    height: 800px;
+    height: fit-content;
     opacity: 0.9;
     color: rgb(7, 6, 6);
     display: flex;
@@ -1187,9 +1240,7 @@ color: #000;
 
 
 
-
-
-
-
-
+img:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
 
