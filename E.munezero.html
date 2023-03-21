@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>MUNEZERO.E</title>
+</head>
+<style>
+    body {
+        background: #e6e6e6;
+        font-family: Rubik;
+
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+
+
+    .main-head {
+        background: #0D1440;
+        box-shadow: 0px 1px 10px -6px rgba(0, 0, 0, .15);
+        padding: 20px;
+        margin-bottom: 0;
+        margin-top: 50px;
+        color: #fff;
+        font-weight: 500;
+        text-transform: uppercase;
+        border-radius: 4px;
+        font-size: 16px;
+
+
+
+    }
+
+    .pricing-table {
+        background: #fff;
+        box-shadow: 0px 1px 10px -6px rgba(0, 0, 0, .15);
+        padding: 40px;
+        border-radius: 4px;
+        transition: .3s;
+    }
+
+    .pricing-table:hover {
+        box-shadow: 0px 1px 10px -4px rgba(0, 0, 0, .15);
+    }
+
+    .pricing-table .pricing-label {
+        border-radius: 2px;
+        padding: 10px 5px;
+        margin-bottom: 1px;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .pricing-table h2 {
+        color: #3b3b3b;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .pricing-table h5 {
+        color: #B3B3B3;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .pricing-table .pricing-features {
+        margin-top: 2px;
+    }
+
+    .pricing-table .pricing-features .feature {
+        font-size: 14px;
+        margin: 5px 0;
+        color: #B3B3B3;
+    }
+
+    .pricing-table .pricing-features .feature span {
+        display: inline-block;
+        float: right;
+        color: #3b3b3b;
+        font-weight: 500;
+    }
+
+    .pricing-table .price-tag {
+        margin-top: 30px;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .pricing-table .price-tag .symbol {
+        font-size: 24px;
+    }
+
+    .pricing-table .price-tag .amount {
+        letter-spacing: -2px;
+        font-size: 44px;
+    }
+
+    .pricing-table .price-tag .after {
+        color: #3b3b3b;
+        font-weight: 500;
+    }
+
+    .pricing-table .price-button {
+        display: block;
+        color: #fff;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 2px;
+        text-align: center;
+        font-weight: 500;
+        transition: .3s;
+    }
+
+    .pricing-table .price-button:hover {
+        text-decoration: none;
+    }
+
+    .purple .pricing-label {
+        background: #cad2ff;
+        color: #627afe;
+    }
+
+    .purple .price-tag {
+        color: #627afe;
+    }
+
+    .purple .price-button {
+        background: #627afe;
+    }
+
+    .purple .price-button:hover {
+        background: #546dfe;
+    }
+
+    .turquoise .pricing-label {
+        background: #b9edee;
+        color: #44cdd2;
+    }
+
+    .turquoise .price-tag {
+        color: #44cdd2;
+    }
+
+    .turquoise .price-button {
+        background: #44cdd2;
+    }
+
+    .turquoise .price-button:hover {
+        background: #2dbcc4;
+    }
+
+    .red .pricing-label {
+        background: #ffc4c4;
+        color: #ff5e5e;
+    }
+
+    .red .price-tag {
+        color: #ff5e5e;
+    }
+
+    .red .price-button {
+        background: #ff5e5e;
+    }
+
+    .red .price-button:hover {
+        background: #f23c3c;
+    }
+
+    .gold .pricing-label {
+        background: #ececc7;
+        color: #c2c50e;
+    }
+
+    .gold .price-tag {
+        color: #c2c50e;
+    }
+
+    .gold .price-button {
+        background: #c2c50e;
+    }
+
+    .gold .price-button:hover {
+        background: #90920b;
+    }
+
+    .col-md-4 {
+        width: 300px;
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .col-md-12 {
+        display: flex;
+        justify-content: center;
+
+
+
+    }
+
+    @media (max-width: 900px) {
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+        }
+
+
+    }
+
+    h1 {
+
+        color: #FFFFFF;
+
+        font-size: 50px;
+        font-weight: 60;
+        font-stretch: condensed;
+        font-family: 'Antic Didone', serif;
+        width: fit-content;
+        margin-right: 30px;
+        text-decoration: underline;
+
+
+
+    }
+
+    h2 {
+        text-decoration: underline;
+
+
+
+    }
+
+    .button-74 {
+        background-color: #fffcf9;
+        border: 1px solid #422800;
+        border-radius: 20px;
+        box-shadow: #33312f 3px 3px 0 0;
+        color: #252421;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: 500;
+        font-size: 15px;
+        padding: 0 10px;
+        line-height: 20px;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        font-family: 'Antic Didone', serif;
+    }
+
+    .button-74:hover {
+        background-color: rgb(180, 180, 179);
+    }
+
+    .button-74:active {
+        box-shadow: #422800 2px 2px 0 0;
+        transform: translate(2px, 2px);
+    }
+
+    @media (min-width: 768px) {
+        .button-74 {
+            min-width: 120px;
+            padding: 0 25px;
+        }
+    }
+
+    .palist {
+        display: list-item;
+        list-style: square;
+        margin: 5px;
+    }
+
+    .palists {
+        display: list-item;
+        list-style: inside;
+        margin: 5px;
+    }
+
+    img:hover {
+        transform: scale(1.2);
+        /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+
+    .copyright {
+        float: inline-end;
+        color: white;
+    }
+
+    .footmenu {
+        margin: 40px;
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <div style="display: flex; justify-content: center;">
+        <h1> <a style="color: white;" href="index.html"> E.MUNEZERO</a></h1>
+        <p class="copyright"> © </p>
+
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <p style="  color: rgb(95, 89, 89);"> - LANCEMENT 2023 -</p>
+    </div>
+
+
+
+    <!-- HTML !-->
+    <div style="display: flex; justify-content: center; width: 80%; margin: 10%;">
+
+
+
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+
+
+            <div style="width: 70%;">
+                <h2>BIENVENUE !</h2>
+                <div style="float: right; display: flex; flex-direction: column;">
+                    <img src="Logo.HTML.png" alt="Avatar" style="width:40px;height:40px; margin: 10px; ">
+                    <img src="Logo.CSS.png" alt="Avatar" style="width:40px;height:40px; margin: 10px; ">
+                    <img src="Logo.js.png" alt="Avatar" style="width:40px;height:40px; margin: 10px; ">
+                </div>
+                <p> Je m'appelle Esther,
+                    <br> Je suis créatrice de site internet [Html] [CSS] [Java script].
+                    <br> Vous trouverez ci-dessous les services que je propose, pour le lancement Juillet/Septembre
+                    2023.
+                    <br>
+                    <br>
+                    Durant le mois <a href="LeCalendrier.html"> d'avril 2023, </a> il vous est d'ores et déjà possible
+                    de
+                    prendre
+                    rdv,
+                    <br> pour préparé la réalisation de votre site-web.
+                    <br>
+                    <br>
+                    Les différents services, débuterons dés le mois de <a href="LeCalendrier.html"> juillet 2023. </a>
+
+                </p>
+            </div>
+
+            <div style="width: 50%; margin-top: 30px;">
+                <h2> La création de votre site web.</h2>
+                <div class="palist">
+                    <h3> Etape 1. Rendez-vous de préparation.</h3>
+                    Le rendez-vous de préparation sert à identifié vos besoins,
+                    et à définir toutes les bases de votre site-web.
+
+
+                </div>
+                <div class="palist">
+                    <h3>Etape 2. La Réalisation</h3>
+                    La réalisation est une période de 2 à 3 semaine pour réaliser l'entiérté de votre projet site-web.
+                    <br>
+                    Il n'est pas possible de commencé un projet sans être passé par l'étape 1.
+
+
+                </div>
+            </div>
+
+            <div style="width: 80% ; float: right; margin-top: 30px;">
+                <h2> Prendre un rendez-vous</h2>
+                <div>
+                    Pour toute personne résident en belgique, <br> le premier rendez-vous ce fait en présentiel.
+                    <br>
+                    <br> Après avoir choisit
+                </div>
+                <div class="palists">
+                    la prériode de préparation, voir le calendrier.
+
+                </div>
+                <div class="palists">
+                    la prériode de réalisation, voir le calendrier.
+
+                </div>
+
+                <div class="palists">
+                    la/les(s) formule(s), voir ci-dessous.
+
+                </div>
+
+                <div>
+                    Envoi-moi un message via Instagram ou email,
+                    <br> en mentionnant tes choix.
+
+                </div>
+
+
+            </div>
+
+
+            <div style="display: flex; justify-content: center;align-items: center; margin: 20px;">
+
+                <a style="height: fit-content; margin-right: 30px; " href=" LeCalendrier.html"> <button
+                        class="button-74" role="button">LE
+                        CALENDRIER</button></a>
+
+                <a href="https://www.instagram.com/esther.munezero/" style="width: fit-content; height: fit-content;">
+                    <img src="logoinsta2.png" alt="" style="width: 30px; margin: 30px;"> </a>
+                <a href="mailto:estmwis@hotmail.com" style="width: fit-content; height: fit-content;"> <img
+                        src="logomail2.png" alt="" style="width: 30px; margin: 30px;"> </a>
+            </div>
+
+
+
+            <div style="display: none; flex-wrap: wrap; width: 70%;">
+                <h2>Parain/Maraine</h2>
+
+                <div style="margin: 15px; width: 45%;">
+                    <h2 style="color: #e4b945;">Réduction -50%* <br> sur tout les services</h2>
+                    <h3> Comment le devenir? </h3>
+
+
+                    <div class="palist">
+                        1 - Devient client, .
+
+                    </div>
+                    <div class="palist">
+                        2 - La personne parainer obtiendra une réduction de
+                        <br> - 25% sur tout les services lors de son
+                        engagement.
+
+                    </div>
+                    <div class="palist">
+                        3 - Vous recevez une réduction de -50% sur tout les services.
+                    </div>
+                    </p>
+
+                    <p style="color: #8154fe; font-size: 12px;">
+                        *La réduction est applicable au moment où le
+                        parainer/la marainer
+                        s'engage.
+                        <br>
+                        *Pour la maintenance de site-web la réduction s'applique pendant 3 mois.
+
+
+                    </p>
+
+                </div>
+                <div style="margin: 15px; width: 45%;">
+                    <h2 style="color: #e47745;"> Réduction - 65%* <br> sur tout les services</h2>
+                    <h3> Comment le devenir? </h3>
+
+
+                    <div class="palist">
+                        1 - Devenir client. (minimum 1 service)
+                    </div>
+                    <div class="palist"> 2- Les 2 personnes parainer obtiendront une réduction de - 50% sur tout les
+                        services (2 fomules max)
+
+                    </div>
+                    <div class="palist">
+                        3 - Vous recevez une réduction de -65%sur tout les services (2 fomules max).
+                    </div>
+                    <p style="color: #8154fe; font-size: 12px;"> *La réduction applicable au moment où le
+                        parainer/la marainer
+                        s'engage. </p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="container">
+        <div class="col-md-12 mb-5">
+            <h2 class="main-head">Formules, Creation Site Web </h2>
+        </div>
+        <div class="row">
+
+            <!-- Purple Table -->
+            <div class="col-md-4">
+                <div class="pricing-table purple">
+                    <!-- Table Head -->
+                    <div class="pricing-label">Fixed Price</div>
+                    <h2>Le Basique</h2>
+                    <h5>Made for personnal project</h5>
+                    <!-- Features -->
+                    <div class="pricing-features">
+                        <div class="feature">Domain name<span></span></div>
+                        <div class="feature">mail<span></span></div>
+                        <div class="feature">Pages<span>2</span></div>
+
+                        <div class="feature">Options <span> Basique</span></div>
+                        <div class="feature">Support<span>Only Mail</span></div>
+                    </div>
+                    <!-- Price -->
+                    <div class="price-tag">
+                        <span class="symbol">€</span>
+                        <span class="amount">250* <br> </span>
+                        <span class="after"> Student price 160* € <br> (*Prix de lancement) </span>
+                    </div>
+                    <!-- Button -->
+                    <!--<a class="price-button" href="#">Get Started</a>-->
+                </div>
+            </div>
+            <!-- Turquoise Table -->
+            <div class="col-md-4">
+                <div class="pricing-table turquoise">
+                    <!-- Table Head -->
+                    <div class="pricing-label">Fixed Price</div>
+                    <h2>Le Middle</h2>
+                    <h5>Made for group project</h5>
+                    <!-- Features -->
+                    <div class="pricing-features">
+                        <div class="feature">Domain name<span></span></div>
+                        <div class="feature">mail<span></span></div>
+                        <div class="feature">Pages<span>3</span></div>
+
+                        <div class="feature">Options <span> Basique</span></div>
+                        <div class="feature">Support<span>Only Mail</span></div>
+                    </div>
+                    <!-- Price -->
+                    <div class="price-tag">
+                        <span class="symbol">€</span>
+                        <span class="amount">350* <br></span>
+                        <span class="after"> Student price 270* € <br> (*Prix de lancement)</span>
+                    </div>
+                    <!-- Button -->
+                    <!--<a class="price-button" href="#">Get Started</a>-->
+                </div>
+            </div>
+            <!-- Red Table -->
+            <div class="col-md-4">
+                <div class="pricing-table red">
+                    <!-- Table Head -->
+                    <div class="pricing-label">Fixed Price</div>
+                    <h2>Le Best</h2>
+                    <h5>Made for busness</h5>
+                    <!-- Features -->
+                    <div class="pricing-features">
+                        <div class="feature">Domain name<span></span></div>
+                        <div class="feature">mail<span></span></div>
+                        <div class="feature">Pages<span>4</span></div>
+
+                        <div class="feature">Options <span> payment/ account</span></div>
+                        <div class="feature">Support<span>Mail/Phone</span></div>
+                    </div>
+                    <!-- Price -->
+                    <div class="price-tag">
+                        <span class="symbol">€</span>
+                        <span class="amount">450* <br></span>
+                        <span class="after"> Student price 370* € <br> (*Prix de lancement)</span>
+                    </div>
+                    <!-- Button -->
+                    <!--<a class="price-button" href="#">Get Started</a>-->
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="pricing-table gold">
+                    <!-- Table Head -->
+                    <div class="pricing-label">Engagement 3 month</div>
+                    <h2>Le Pro</h2>
+                    <h5>Made for start up project</h5>
+                    <!-- Features -->
+                    <div class="pricing-features">
+                        <div class="feature">Domains name<span></span></div>
+                        <div class="feature">mail<span></span></div>
+                        <div class="feature">Pages<span>on demand</span></div>
+
+                        <div class="feature">Options <span> on demand</span></div>
+                        <div class="feature">Support<span>Mail/Phone</span></div>
+                    </div>
+                    <!-- Price -->
+                    <div class="price-tag">
+                        <span class="symbol">€</span>
+                        <span class="amount">550* <br> </span>
+                        <span class="after"> Student price 470* € <br> (*Prix de lancement)</span>
+                    </div>
+                    <!-- Button -->
+                    <!--<a class="price-button" href="#">Get Started</a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col-md-12 mb-5">
+            <div>
+                <h2 class="main-head">Maintenance de site-web - Priorité aux clients</h2>
+            </div>
+        </div>
+        <div class="row">
+
+            <!-- Purple Table -->
+            <div class="col-md-4">
+                <div class="pricing-table purple">
+                    <!-- Table Head -->
+                    <div class="pricing-label"> Engagement 3 month</div>
+                    <h2>Le Basique</h2>
+                    <h5>Made for personnal project</h5>
+                    <!-- Features -->
+                    <div class="pricing-features">
+                        <div class="feature">appointment <span>1x (30min)</span></div>
+
+                        <div class="feature">modification of content<br> (text, color)<span
+                                style="color: rgb(68, 156, 60);">V</span></div>
+                        <div class="feature">Content creation<br>(sections,pages,options)<span
+                                style="color: red;">X</span></div>
+                        <div class="feature"><span></span></div>
+                    </div>
+                    <!-- Price -->
+                    <div class="price-tag">
+                        <span class="symbol">€</span>
+                        <span class="amount">25*</span>
+                        <span class="after">/month <br> Student price 15* € <br>(*Prix de lancement)</span>
+                    </div>
+                    <!-- Button -->
+                    <!--<a class="price-button" href="#">Get Started</a>-->
+                </div>
+            </div>
+            <!-- Turquoise Table -->
+            <div class="col-md-4">
+                <div class="pricing-table turquoise">
+                    <!-- Table Head -->
+                    <div class="pricing-label">Engagement 3 month</div>
+                    <h2>Le Middle</h2>
+                    <h5>Made for group project</h5>
+                    <!-- Features -->
+                    <div class="pricing-features">
+                        <div class="feature">appointment <span>2x (30min)</span></div>
+
+                        <div class="feature">modification of content<br> (text, color)<span
+                                style="color: rgb(68, 156, 60);">V</span></div>
+                        <div class="feature">Content creation<br>(sections,pages,options)<span
+                                style="color: red;">X</span></div>
+                        <div class="feature"><span></span></div>
+                    </div>
+                    <!-- Price -->
+                    <div class="price-tag">
+                        <span class="symbol">€</span>
+                        <span class="amount">45*</span>
+                        <span class="after">/month <br> Student price 35* € <br>(*Prix de lancement)</span>
+                    </div>
+                    <!-- Button -->
+                    <!--<a class="price-button" href="#">Get Started</a>-->
+                </div>
+            </div>
+            <!-- Red Table -->
+            <div class="col-md-4">
+                <div class="pricing-table red">
+                    <!-- Table Head -->
+                    <div class="pricing-label">Engagement 3 month</div>
+                    <h2>Le Best</h2>
+                    <h5>Made for start up project</h5>
+                    <!-- Features -->
+                    <div class="pricing-features">
+                        <div class="feature">appointment <span>3x (30min)</span></div>
+
+                        <div class="feature">modification of content<br> (text, color)<span
+                                style="color: rgb(68, 156, 60);">V</span></div>
+                        <div class="feature">Content creation<br>(sections,pages,options)<span
+                                style="color: rgb(68, 156, 60);">V</span></div>
+                        <div class="feature"><span></span></div>
+                    </div>
+                    <!-- Price -->
+                    <div class="price-tag">
+                        <span class="symbol">€</span>
+                        <span class="amount">65*</span>
+                        <span class="after">/month <br> Student price 55* € <br>(*Prix de lancement)</span>
+                    </div>
+                    <!-- Button -->
+                    <!--<a class="price-button" href="#">Get Started</a>-->
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pricing-table gold">
+                    <!-- Table Head -->
+                    <div class="pricing-label">Engagement 3 month</div>
+                    <h2>Le Pro</h2>
+                    <h5>Made for start up project</h5>
+                    <!-- Features -->
+                    <div class="pricing-features">
+                        <div class="feature">appointment <span>4x (30min)</span></div>
+
+                        <div class="feature">modification of content<br> (text, color)<span
+                                style="color: rgb(68, 156, 60);">V</span></div>
+                        <div class="feature">Content creation<br>(sections,pages,options)<span
+                                style="color: rgb(68, 156, 60);">V</span></div>
+                        <div class="feature"><span></span></div>
+                    </div>
+                    <!-- Price -->
+                    <div class="price-tag">
+                        <span class="symbol">€</span>
+                        <span class="amount">100*</span>
+                        <span class="after">/month <br> Student price 70* € <br>(*Prix de lancement)</span>
+                    </div>
+                    <!-- Button -->
+                    <!--<a class="price-button" href="#">Get Started</a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footmenu">
+
+        <a href="mentions.html" style="color: rgb(13, 13, 14); margin: 10px;"> MENTIONS LÉGALES</a>
+
+        <a style="color: rgb(13, 13, 14);margin: 10px;"> TOUT DROITS RESERVÉS©EMUNEZERO.COM
+
+
+
+    </div>
+
+
+
+
+    <script src="move.js"> </script>
+</body>
+
+</html>
