@@ -53,6 +53,16 @@ h1{
   
 }
 
+@media  (max-width: 900px) {
+  h1{
+ 
+    font-size: 40px;
+    
+  }
+
+
+}
+
 
 /* navbar*/
 .navbar{
@@ -165,26 +175,14 @@ text-decoration: underline white;
 
 
 /** footer*/
-.foot{
-  display: flex;
-  background-color: rgba(185, 186, 187, 0.55, 0.60);
-  border-top: solid 1px white;
-  border-bottom: none;
-  
-  border-top: 10%;
-  box-decoration-break: 10px white;
-  
-  font-size: 30px;
-  
-  
-  opacity: 0.75;  
-}
+
 
 .footmenu {
   margin: 40px;
   display: flex;
   justify-content: center;
-  font-size: 30px;
+  flex-wrap: wrap;
+  
 }
 
 /** lien et texte**/
@@ -228,7 +226,7 @@ h2{
 
 }
 
-@media  (max-width: 800px) {
+@media  (max-width: 600px) {
   
   .pa {
     display:none;
@@ -460,6 +458,7 @@ span{
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  margin-right: 30px ;
 }
 
 .button-54:active {
@@ -545,7 +544,14 @@ span{
   }
 }
 
+/** logos*/
 
+@media (max-width: 600px) {
+
+  .logos{
+    display: none;
+  }
+}
 
 
 
@@ -748,7 +754,7 @@ span{
 
   .mobile {
     display: flex;
-    
+    flex-direction: column;
     width: fit-content;
     z-index: 99;
   }
@@ -872,16 +878,14 @@ span{
   
 }
 
-
-
-
-.projets{
+.projets {
   
-  width: 80%;
-  
-  
-
+width: 70%;
 }
+
+
+
+
 
 .projets p{
   
@@ -895,7 +899,7 @@ span{
 
 .projet-1{
 
-  width: 50%;
+  width: 60%;
   float: right;
   text-align: right;
 
@@ -1118,10 +1122,10 @@ color: #000;
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
-  width: 600px;
-  height: 250px;
+  width: 350px;
+  height: 350px;
   margin-top: 40px;
-  border: 1px solid #f1f1f1;
+  /*border: 1px solid #f1f1f1;*/
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -1160,7 +1164,8 @@ color: #000;
 
 /* Style the back side */
 .flip-card-back {
-  border: solid black;
+  
+  border: solid 1px rgb(197, 189, 189);
   color: rgb(15, 14, 14);
   transform: rotateY(180deg);
   display: flex;
@@ -1181,18 +1186,18 @@ color: #000;
  @media (max-width: 600px) {
   .flip-card {
     /* background-color:rgb(87, 145, 140);*/
-     width: 600px;
+     width: 90%;
      margin-left: 10%;
-     height: 300px;
+     height: 400px;
      margin-top: 40px;
-     border: 1px solid #f1f1f1;
+     
      perspective: 1000px; /* Remove this if you don't want the 3D effect */
      text-align: left;
      
    }
 
   .flip-card-front {
-    background-color:rgb(87, 145, 140);
+    
     height: fit-content;
     opacity: 0.9;
     color: rgb(7, 6, 6);
@@ -1203,9 +1208,9 @@ color: #000;
   
   
   .flip-card-back {
-    background-color:rgb(151, 156, 102);
+    background-color:rgb(231, 231, 227);
     opacity: 0.9;
-    border: solid black;
+    border: solid 1px black;
     color: rgb(15, 14, 14);
     transform: rotateY(180deg);
     
@@ -1235,6 +1240,16 @@ color: #000;
   color: #000;
   font-family: 'Courier New', Courier, monospace;
   
+}
+
+@media (max-width: 600px) {
+
+  .cardtext{
+
+    width: 80%;
+  }
+
+
 }
 
 
