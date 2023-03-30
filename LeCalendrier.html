@@ -4,7 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>MUNEZERO.E</title>
+    <title>E.MUNEZERO Le Planning</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="logoEM.png">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -46,20 +47,10 @@
         justify-content: center;
     }
 
-    .available {
-        background-color: #b9edee;
-    }
 
-    .new {
-        background-color: #ececc7;
-    }
-
-    .maintenance {
-        background-color: #ebacac;
-    }
 
     .day {
-        font-size: 8em;
+        font-size: 30px;
         font-weight: 900;
         line-height: 1em;
     }
@@ -135,6 +126,18 @@
         width: 8px;
     }
 
+    .RDV {
+        margin: 40px;
+    }
+
+    .RDV h2 {
+        color: rgb(114, 101, 101);
+    }
+
+    .codes {
+        margin: 40px;
+    }
+
     .codes p {
         font-size: 15px;
         color: black;
@@ -152,7 +155,7 @@
     }
 
     .code1 {
-        background-color: #b9edee;
+        background-color: #c3dedf;
     }
 
     .code2 {
@@ -162,34 +165,64 @@
     }
 
     .code3 {
-        background: #ffc4c4;
+        background: #dbc4d0;
 
+    }
+
+    .available {
+        background-color: #b9edee;
+    }
+
+    .new {
+        background-color: #ececc7;
+    }
+
+    .maintenance {
+        background-color: #ebacac;
     }
 </style>
 
 <body>
 
-    <h1 style="margin-bottom: none;"> Le Calendrier </h1>
+    <h1 style="margin-bottom: none;"> Le Planning </h1>
     <p style="  color: rgb(95, 89, 89);"> LANCEMENT 2023
 
     </p>
+    <div style="display: flex; ">
+        <div class="codes">
+            <div style="display: flex;">
+                <div class="code code1"></div>
+                <div>
+                    <p> Rendez-vous de préparation. </p>
+                </div>
+            </div>
 
-    <div class="codes">
-        <div style="display: flex;">
-            <div class="code code1"></div>
+            <div style="display: flex;">
+                <div class="code code2"></div>
+                <div>
+                    <p> Réalisation site-web. <br> Formules disponible : Le basic et Le Middle </p>
+                </div>
+            </div>
+            <div style="display: flex;">
+                <div class="code code3"></div>
+                <div>
+                    <p> Réalisation site-web. <br> Toutes les formules sont accessible </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="RDV">
+            <h2> Demander un rendez-vous.</h2>
             <div>
-                <p> Rendez-vous de préparation. </p>
+                <a href="https://www.instagram.com/esther.munezero/" style="width: fit-content; height: fit-content;">
+                    <img src="logoinsta2.png" alt="" style="width: 30px; margin: 30px;"> </a>
+                <a href="mailto:estmwis@hotmail.com" style="width: fit-content; height: fit-content;"> <img
+                        src="logomail2.png" alt="" style="width: 30px; margin: 30px;"> </a>
+
             </div>
         </div>
-
-        <div style="display: flex;">
-            <div class="code code2"></div>
-            <div>
-                <p> Réalisation site-web. </p>
-            </div>
-        </div>
-
     </div>
+
 
 
     <div class="container" style="display: flex; flex-wrap: wrap;">
@@ -327,24 +360,25 @@
                     <td>2</td>
 
                     <tr>
-                        <td class="available">3</td>
-                        <td class="available">4</td>
-                        <td class="available">5</td>
-                        <td class="available">6</td>
-                        <td class="available">7</td>
-                        <td class="available">8</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td class="code1 ">7</td>
+                        <td class="code1 ">8</td>
                         <td>9</td>
                     </tr>
 
                     <tr>
-                        <a style="z-index: 30;" href="mailto: estmwis@hotmail.com">
-                            <td href="mailto: estmwis@hotmail.com" class="available">10</td>
-                        </a>
-                        <td class="available">11</td>
-                        <td class="available">12</td>
-                        <td class="available">13</td>
-                        <td class="available">14</td>
-                        <td class="available">15</td>
+
+                        <td href="mailto: estmwis@hotmail.com"><a style="z-index: 30;"
+                                href="mailto: estmwis@hotmail.com">10</a></td>
+
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td class="code1 ">14</td>
+                        <td class="code1 ">15</td>
                         <td>16</td>
                     </tr>
 
@@ -353,8 +387,8 @@
                         <td>18</td>
                         <td>19</td>
                         <td>20</td>
-                        <td class="available">21</td>
-                        <td class="available">22</td>
+                        <td class="code1">21</td>
+                        <td class="code1">22</td>
                         <td>23</td>
                         <!--<td class="current-day">23</td>-->
                     </tr>
@@ -364,8 +398,8 @@
                         <td>25</td>
                         <td>26</td>
                         <td>27</td>
-                        <td class="available">28</td>
-                        <td class="available">29</td>
+                        <td class="code1">28</td>
+                        <td class="code1">29</td>
                         <td>30</td>
 
                     </tr>
@@ -624,11 +658,11 @@
 
                     <tr>
 
-                        <td class="available">17</td>
-                        <td class="available">18</td>
-                        <td class="available">19</td>
-                        <td class="available">20</td>
-                        <td class="available">21</td>
+                        <td class="code1">17</td>
+                        <td class="code1">18</td>
+                        <td class="code1">19</td>
+                        <td class="code1">20</td>
+                        <td class="code1">21</td>
                         <td>22</td>
                         <td>23</td>
                     </tr>
@@ -794,12 +828,12 @@
                     </tr>
 
                     <tr>
-                        <td class="available">4</td>
-                        <td class="available">5</td>
-                        <td class="available">6</td>
-                        <td class="available">7</td>
-                        <td class="available">8</td>
-                        <td class="available">9</td>
+                        <td class="code1">4</td>
+                        <td class="code1">5</td>
+                        <td class="code1">6</td>
+                        <td class="code1">7</td>
+                        <td class="code1">8</td>
+                        <td class="code1">9</td>
                         <td>10</td>
 
                     </tr>
@@ -816,23 +850,23 @@
                     </tr>
 
                     <tr>
-                        <td class="new">18</td>
-                        <td class="new">19</td>
-                        <td class="new">20</td>
-                        <td class="new">21</td>
-                        <td class="new">22</td>
-                        <td class="new">23</td>
+                        <td class="code3 ">18</td>
+                        <td class="code3 ">19</td>
+                        <td class="code3 ">20</td>
+                        <td class="code3 ">21</td>
+                        <td class="code3 ">22</td>
+                        <td class="code3 ">23</td>
                         <td>24</td>
 
                     </tr>
 
                     <tr>
-                        <td class="new">25</td>
-                        <td class="new">26</td>
-                        <td class="new">27</td>
-                        <td class="new">28</td>
-                        <td class="new">29</td>
-                        <td class="new">30</td>
+                        <td class="code3 ">25</td>
+                        <td class="code3 ">26</td>
+                        <td class="code3 ">27</td>
+                        <td class="code3 ">28</td>
+                        <td class="code3 ">29</td>
+                        <td class="code3 ">30</td>
                         <td class="next-month">1</td>
 
                     </tr>
@@ -890,12 +924,12 @@
                     </tr>
 
                     <tr>
-                        <td class="new">2</td>
-                        <td class="new">3</td>
-                        <td class="new">4</td>
-                        <td class="new">5</td>
-                        <td class="new">6</td>
-                        <td class="new">7</td>
+                        <td class="code3 ">2</td>
+                        <td class="code3 ">3</td>
+                        <td class="code3 ">4</td>
+                        <td class="code3 ">5</td>
+                        <td class="code3 ">6</td>
+                        <td class="code3 ">7</td>
                         <td>8</td>
                     </tr>
 
@@ -1045,9 +1079,9 @@
     <div class=" navbar foot">
         <div class="footmenu">
 
-            <a href="" style="color: rgb(13, 13, 14); margin: 10px;"> MENTIONS LÉGALES</a>
+            <a href="mentions.html" style="color: rgb(13, 13, 14); margin: 10px;"> MENTIONS LÉGALES</a>
 
-            <a style="color: rgb(13, 13, 14);margin: 10px;"> TOUT DROITS RESERVÉS©EMUNEZERO.COM
+            <a style="color: rgb(13, 13, 14);margin: 10px;"> TOUT DROITS RESERVÉS©EMUNEZERO.COM 2023
 
 
 
