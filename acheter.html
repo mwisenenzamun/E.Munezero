@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>E.MUNEZERO La boutique</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="logoEM.png">
+</head>
+<style>
+    body {
+        background: rgb(53, 60, 73);
+
+        font-family: Rubik;
+        color: aliceblue;
+
+    }
+
+    .payermonarticle {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    h1 {
+
+        color: #FFFFFF;
+
+        font-size: 50px;
+        font-weight: 60;
+        font-stretch: condensed;
+        font-family: 'Antic Didone', serif;
+        width: fit-content;
+        margin-right: 30px;
+        text-decoration: underline;
+
+
+
+    }
+
+    h2 {
+        font-family: 'Antic Didone', serif;
+        color: #FFFFFF;
+
+    }
+
+    .lesachats {
+        width: 100%;
+        align-items: center;
+    }
+
+    .lesproduits {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        width: 40%;
+
+
+    }
+
+    .lesproduits img {
+
+        width: 270px;
+
+
+    }
+
+    .pack img {
+
+        width: 170px;
+
+
+    }
+
+    img {
+
+        width: 270px;
+
+
+    }
+
+
+    .description {
+        display: flex;
+
+        align-items: center;
+        width: 100%;
+    }
+
+    .descriptiontext {
+        width: 40%;
+        margin: 50px;
+    }
+
+
+    @media (max-width: 600px) {
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 100%;
+        }
+
+        .lesproduits {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 80%;
+            margin: 40px;
+
+        }
+
+        .descriptiontext {
+            width: 80%;
+            margin: 50px;
+        }
+
+
+    }
+
+    .prix h1 {
+        text-decoration: none;
+
+    }
+
+    img:hover {
+        transform: scale(0.9);
+        /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+
+
+    .copyright {
+        float: inline-end;
+        color: white;
+    }
+
+    .footmenu {
+        margin: 40px;
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<body>
+
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=AfQPxJUHCIat_sYSmcv_vMSYR5A2zRWdPvd8iNVXSjJgoq9QsBd0YB8rL7ZB7n82f8FeZPCKVuBgA3Zf&currency=EUR"
+        data-sdk-integration-source="button-factory"></script>
+
+    <!-- smtpj pour les email-->
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <!-- smtpj pour les email -->
+
+
+
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <h1> <a style="color: white;" href="index.html"> E.MUNEZERO</a></h1>
+        <p class="copyright"> © </p>
+
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <p style="  color: rgb(95, 89, 89);"> - La Boutique en ligne -</p>
+    </div>
+    <div class="lesachats">
+        <div class="description">
+            <div class="descriptiontext">
+                <h1>Produits</h1>
+                <h2>Le pack : 5 Recueils de poésie <br>[version digitale]</h2>
+
+                <h2>Description</h2>
+                <p style="width: 60%;"> Recueils de poésie, où les mots expliquent et décrivent le cheminement d'un(e)
+                    jeune
+                    adulte, dans sa foi
+                    chrétienne. <br>
+                    <br> Les poemes refletent son désir de renouveau et de changement, dans sa relation avec
+                    Dieu.
+                    <br> Là où elle décrit Dieu comme étant loin et prés à la fois, elle réalise combien sa perceptions
+                    de
+                    Lui est bien plus grande qu'elle l'imagine.
+                    <br> <br> Elle se détourne de plusieurs chemins avant de commencer à entreprendre le Chemin de la
+                    foi.
+
+                </p>
+
+                <h2>Dètails</h2>
+
+                <div style="width: 80%; list-style: square;">
+                    [ 4euros ] Les vallées et les montagnes - 22 pages
+                    <br> [ 4euros ] Sortir - 17 pages
+                    <br> [ 4euros ] Chambre Haute - 15 pages
+                    <br> [ 4euros ] D'une pensée à l'autre - 30 pages
+                    <br> [ 3euros ] La parole de Dieu et l'étudiant - 10 pages <br>
+                </div>
+
+                <div>
+                    <h2>Prix du pack : 12€</h2>
+
+                </div>
+            </div>
+
+
+            <div class="lesproduits pack">
+
+
+                <img src="les Vallées et montagnes/1.png" alt="">
+                <img src="sortir/1.png" alt="">
+                <img src="laChambreHaute/1.png" alt="">
+                <img src="pensée/1.png" alt="">
+                <img src="paroleDeDieu/1.png" alt="">
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+        <div class="description">
+            <div class="descriptiontext">
+
+                <h2>Le Livre : Sur le chemin de la foi <br>[version digitale]</h2>
+                <h2>Description</h2>
+                <p>
+                    "Sur le chemin de la foi". <br> <br>
+                    Ce Recueil est une suite logique
+                    des précédents recueils.
+
+                    <br> Quand t'il sagit d'une vie toute entière, les décisions deviennent une lourde tâche.
+                    <br> <br> Mais au travers de la parole de Dieu tout semble coulé de source,
+                    <br> et croire semble être l'une des plus belle chose dont Il nous ait fait grace.
+                    <br> <br>
+                    On ne se précipite plus dans une course,
+                    <br> mais on rentre dnas une réel relation avec Dieu,
+                    <br> là où nos attentes ne sont plus au niveau de nos interêts.
+                    <br>
+                    <br> Car en réalité croire et une des facettes de l'amour parfait,
+                    <br> qui engendre en nous le désirs d'aimer Dieu plus que tout
+                    <br> et d'aimer notre prochain comme nous-même.
+
+                </p>
+
+                <h2>Dètails</h2>
+
+                <div style="width: 60%; list-style: square;">
+                    Sur le chemin de la foi - 100 pages <br>
+
+                </div>
+
+
+                <div>
+                    <h2>Prix : 12€</h2>
+
+                </div>
+            </div>
+
+
+
+
+            <div class="lesproduits">
+
+                <img src="SurLe chemindeLafoi/1.png" alt="">
+
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+    <div class="payermonarticle">
+        <h2> Commander mon article</h2>
+        <p> Choisir mon produit et payer</p>
+
+        <div id="smart-button-container">
+            <div style="text-align: center;">
+                <div style="margin-bottom: 1.25rem;">
+                    <p>Recueils de poésie EMUNEZERO
+                    </p>
+                    <select id="item-options">
+                        <option value="Le pack - 5 recueils de poésie" price="12">Le pack - 5 recueils de poésie - 12
+                            EUR
+                        </option>
+                        <option value="Les vallées et les montagnes" price="4">Les vallées et les montagnes - 4 EUR
+                        </option>
+                        <option value="Sortir" price="4">Sortir - 4 EUR</option>
+                        <option value="Chambre haute " price="4">Chambre haute - 4 EUR</option>
+                        <option value="D'une pensée à l'autre " price="4">D'une pensée à l'autre - 4 EUR</option>
+                        <option value="L'étudiant et la parole de Dieu" price="3">L'étudiant et la parole de Dieu - 3
+                            EUR
+                        </option>
+                    </select>
+                    <select style="visibility: hidden" id="quantitySelect"></select>
+                </div>
+                <div id="paypal-button-container"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footmenu">
+
+        <a href="mentions.html" style="color: rgb(13, 13, 14); margin: 10px;"> MENTIONS LÉGALES</a>
+
+        <a style="color: rgb(13, 13, 14);margin: 10px;"> TOUT DROITS RESERVÉS©EMUNEZERO.COM 2023
+
+
+
+    </div>
+
+
+
+
+    <script src="paypal.js"></script>
+</body>
+
+</html>
