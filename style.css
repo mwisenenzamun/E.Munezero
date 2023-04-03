@@ -779,10 +779,10 @@ span{
     border: red;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
  
   .mobile img{
-    height: 200px;
+    height: 290px;
     /*clip-path: polygon(50% 0, 100% 0%, 50% 100%, 0% 100%);*/
     /*clip-path: polygon(25% 0%, 75% 0, 75% 100%, 25% 100%);*/
     margin-right: 10px;
@@ -801,7 +801,7 @@ span{
   .mobile-text {
   
     margin-top: 5px;
-    width: 190px;
+    width: 270px;
     background-color: rgb(24, 23, 23);
     font-family: 'Antic Didone', serif;
     font-size: 15px;
@@ -1231,9 +1231,9 @@ color: #000;
  @media (max-width: 600px) {
   .flip-card {
     /* background-color:rgb(87, 145, 140);*/
-     width: 250px;
-     margin-left: 10%;
-     height: 400px;
+     width: 80%;
+     
+     height:410px;
      margin-top: 40px;
      
      perspective: 1000px; /* Remove this if you don't want the 3D effect */
