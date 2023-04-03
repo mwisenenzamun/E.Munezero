@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>E.M Planning</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="logoEM.png">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<style>
+    @use postcss-preset-env;
+
+    body {
+        background: #f1f1f165;
+        display: grid;
+        font: 87.5%/1.5em 'Lato', sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        place-items: center;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    td {
+        padding: 0;
+    }
+
+    .calendar-container {
+        position: relative;
+        width: 450px;
+    }
+
+    .calendar-container header {
+        border-radius: 1em 1em 0 0;
+        background: #515858;
+        color: #fff;
+        padding: 3em 2em;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+    .day {
+        font-size: 30px;
+        font-weight: 900;
+        line-height: 1em;
+    }
+
+    .month {
+        font-size: 30px;
+        line-height: 1em;
+        text-transform: uppercase;
+        font-family: 'Courier New';
+    }
+
+    .calendar {
+        background: #fff;
+        border-radius: 0 0 1em 1em;
+        -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, .2), 0 3px 1px #fff;
+        box-shadow: 0 2px 1px rgba(0, 0, 0, .2), 0 3px 1px #fff;
+        color: #555;
+        display: inline-block;
+        padding: 2em;
+    }
+
+    .calendar thead {
+        color: #918080;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .calendar td {
+        padding: .5em 1em;
+        text-align: center;
+    }
+
+    .calendar tbody td:hover {
+        background: #cacaca;
+        color: #fff;
+    }
+
+    .current-day {
+        color: #6be6c1;
+    }
+
+    .prev-month,
+    .next-month {
+        color: #cacaca;
+    }
+
+    .ring-left,
+    .ring-right {
+        position: absolute;
+        top: 230px;
+    }
+
+    .ring-left {
+        left: 2em;
+    }
+
+    .ring-right {
+        right: 2em;
+    }
+
+    .ring-left:before,
+    .ring-left:after,
+    .ring-right:before,
+    .ring-right:after {
+        background: #fff;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 3px 1px rgba(0, 0, 0, .3), 0 -1px 1px rgba(0, 0, 0, .2);
+        box-shadow: 0 3px 1px rgba(0, 0, 0, .3), 0 -1px 1px rgba(0, 0, 0, .2);
+        content: "";
+        display: inline-block;
+        margin: 8px;
+        height: 32px;
+        width: 8px;
+    }
+
+    .RDV {
+        margin: 40px;
+    }
+
+    .RDV h2 {
+        color: rgb(114, 101, 101);
+    }
+
+    .palist {
+        display: list-item;
+        list-style: square;
+        margin: 5px;
+    }
+
+    .palists {
+        display: list-item;
+        list-style: inside;
+        margin: 5px;
+    }
+
+    .codes {
+        margin: 40px;
+    }
+
+    .codes p {
+        font-size: 15px;
+        color: black;
+    }
+
+    .code {
+
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+    }
+
+    .code:hover {
+        transform: scale(1.2);
+    }
+
+    .code1 {
+        background-color: #c3dedf;
+    }
+
+    .code2 {
+
+        background: #ececc7;
+
+    }
+
+    .code3 {
+        background: #dbc4d0;
+
+    }
+
+    .available {
+        background-color: #b9edee;
+    }
+
+    .new {
+        background-color: #ececc7;
+    }
+
+    .maintenance {
+        background-color: #ebacac;
+    }
+</style>
+
+<body>
+    <div style="display: flex;">
+
+        <img style="width: 250px; border-radius: 30px;" src="logoEMdev.png" alt="">
+    </div>
+
+    <p style="  color: rgb(95, 89, 89);"> LANCEMENT 2023</p>
+
+    <div style="margin-top:20px ;">
+        <a href="index.html"><button class="button-54" role="button">E.M ACCUEIl</button></a>
+    </div>
+    <div style="margin-top:20px ;">
+        <a href="EMservices.html"><button class="button-54" role="button">E.M Services</button></a>
+    </div>
+
+    <div style="display: flex; ">
+        <div class="codes">
+            <div style="display: flex;">
+                <div class="code code1"></div>
+                <div>
+                    <p> Rendez-vous de préparation. </p>
+                </div>
+            </div>
+
+            <div style="display: flex;">
+                <div class="code code2"></div>
+                <div>
+                    <p> Réalisation site-web. <br> Formules disponible : Le basic et Le Middle </p>
+                </div>
+            </div>
+            <div style="display: flex;">
+                <div class="code code3"></div>
+                <div>
+                    <p> Réalisation site-web. <br> Toutes les formules sont accessible </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="RDV">
+            <h2> Demander un rendez-vous.</h2>
+            <br> Après avoir choisit
+
+            <div class="palists">
+                la prériode de préparation,
+
+            </div>
+            <div class="palists">
+                la prériode de réalisation,
+
+            </div>
+
+            <div class="palists">
+                la/les(s) formule(s),
+
+            </div>
+
+            <div>
+                envoi-moi un message via Instagram ou email,
+                <br> en me mentionnant tes choix.
+
+            </div>
+
+
+            <div>
+                <a href="https://www.instagram.com/esther.munezero/" style="width: fit-content; height: fit-content;">
+                    <img src="logoinsta2.png" alt="" style="width: 30px; margin: 30px;"> </a>
+                <a href="mailto:estmwis@hotmail.com" style="width: fit-content; height: fit-content;"> <img
+                        src="logomail2.png" alt="" style="width: 30px; margin: 30px;"> </a>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container" style="display: flex; flex-wrap: wrap;">
+
+        <div class="calendar-container">
+
+
+            <!--<div class="ring-left"></div>
+            <div class="ring-right"></div>-->
+
+
+
+
+        </div> <!-- end calendar-container -->
+
+        <div class="calendar-container">
+
+            <header>
+
+                <!--<div class="day">17</div>-->
+                <div class="month">April</div>
+
+            </header>
+
+            <table class="calendar">
+
+                <thead>
+
+                    <tr>
+
+                        <td>Mon</td>
+                        <td>Tue</td>
+                        <td>Wed</td>
+                        <td>Thu</td>
+                        <td>Fri</td>
+                        <td>Sat</td>
+                        <td>Sun</td>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <td class="prev-month">27</td>
+                    <td class="prev-month">28</td>
+                    <td class="prev-month">29</td>
+                    <td class="prev-month">30</td>
+                    <td class="prev-month">31</td>
+                    <td>1</td>
+                    <td>2</td>
+
+                    <tr>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td class="code1 ">7</td>
+                        <td class="code1 ">8</td>
+                        <td>9</td>
+                    </tr>
+
+                    <tr>
+
+                        <td href="mailto: estmwis@hotmail.com"><a style="z-index: 30;"
+                                href="mailto: estmwis@hotmail.com">10</a></td>
+
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td class="code1 ">14</td>
+                        <td class="code1 ">15</td>
+                        <td>16</td>
+                    </tr>
+
+                    <tr>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td class="code1">21</td>
+                        <td class="code1">22</td>
+                        <td>23</td>
+                        <!--<td class="current-day">23</td>-->
+                    </tr>
+
+                    <tr>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td class="code1">28</td>
+                        <td class="code1">29</td>
+                        <td>30</td>
+
+                    </tr>
+
+
+
+                </tbody>
+
+            </table>
+
+            <!--<div class="ring-left"></div>
+            <div class="ring-right"></div>-->
+
+
+
+        </div> <!-- end calendar-container -->
+
+        <div class="calendar-container">
+
+            <header>
+
+                <!--<div class="day">17</div>-->
+                <div class="month">mai</div>
+
+            </header>
+
+            <table class="calendar">
+
+                <thead>
+
+                    <tr>
+
+                        <td>Mon</td>
+                        <td>Tue</td>
+                        <td>Wed</td>
+                        <td>Thu</td>
+                        <td>Fri</td>
+                        <td>Sat</td>
+                        <td>Sun</td>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+
+                    <tr>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                    </tr>
+
+                    <tr>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                    </tr>
+
+                    <tr>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                    </tr>
+
+                    <tr>
+                        <td>29</td>
+                        <td>30</td>
+                        <td class="next-month">1</td>
+                        <td class="next-month">2</td>
+                        <td class="next-month">3</td>
+                        <td class="next-month">4</td>
+                        <td class="next-month">5</td>
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+            <!--<div class="ring-left"></div>
+            <div class="ring-right"></div>-->
+
+
+
+
+        </div> <!-- end calendar-container -->
+
+        <div class="calendar-container">
+
+            <header>
+
+                <!--<div class="day">17</div>-->
+                <div class="month">juin</div>
+
+            </header>
+
+            <table class="calendar">
+
+                <thead>
+
+                    <tr>
+
+                        <td>Mon</td>
+                        <td>Tue</td>
+                        <td>Wed</td>
+                        <td>Thu</td>
+                        <td>Fri</td>
+                        <td>Sat</td>
+                        <td>Sun</td>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td class="prev-month">29</td>
+                        <td class="prev-month">30</td>
+                        <td class="prev-month">31</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                    </tr>
+
+                    <tr>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                    </tr>
+
+                    <tr>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                    </tr>
+
+                    <tr>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td class="next-month">1</td>
+                        <td class="next-month">2</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <!--<div class="ring-left"></div>
+            <div class="ring-right"></div>-->
+
+
+
+
+        </div> <!-- end calendar-container -->
+
+        <div class="calendar-container">
+
+            <header>
+
+                <!--<div class="day">17</div>-->
+                <div class="month">Juillet</div>
+
+            </header>
+
+            <table class="calendar">
+
+                <thead>
+
+                    <tr>
+
+                        <td>Mon</td>
+                        <td>Tue</td>
+                        <td>Wed</td>
+                        <td>Thu</td>
+                        <td>Fri</td>
+                        <td>Sat</td>
+                        <td>Sun</td>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="prev-month">26</td>
+                        <td class="prev-month">27</td>
+                        <td class="prev-month">28</td>
+                        <td class="prev-month">29</td>
+                        <td class="prev-month">30</td>
+                        <td>1</td>
+                        <td>2</td>
+                    </tr>
+
+                    <tr>
+                        <td class="new">3</td>
+                        <td class="new">4</td>
+                        <td class="new">5</td>
+                        <td class="new">6</td>
+                        <td class="new">7</td>
+                        <td class="new">8</td>
+                        <td>9</td>
+                    </tr>
+
+                    <tr>
+                        <td class="new">10</td>
+                        <td class="new">11</td>
+                        <td class="new">12</td>
+                        <td class="new">13</td>
+                        <td class="new">14</td>
+                        <td class="new">15</td>
+                        <td>16</td>
+                    </tr>
+
+                    <tr>
+
+                        <td class="code1">17</td>
+                        <td class="code1">18</td>
+                        <td class="code1">19</td>
+                        <td class="code1">20</td>
+                        <td class="code1">21</td>
+                        <td>22</td>
+                        <td>23</td>
+                    </tr>
+
+                    <tr>
+
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+            <!--<div class="ring-left"></div>
+            <div class="ring-right"></div>-->
+
+
+
+
+        </div> <!-- end calendar-container -->
+
+        <div class="calendar-container">
+
+            <header>
+
+                <!--<div class="day">17</div>-->
+                <div class="month">august</div>
+
+            </header>
+
+            <table class="calendar">
+
+                <thead>
+
+                    <tr>
+
+                        <td>Mon</td>
+                        <td>Tue</td>
+                        <td>Wed</td>
+                        <td>Thu</td>
+                        <td>Fri</td>
+                        <td>Sat</td>
+                        <td>Sun</td>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td class="prev-month">31</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+
+                    <tr>
+
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                    </tr>
+
+                    <tr>
+
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                    </tr>
+
+                    <tr>
+
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                        <td class="next-month">1</td>
+                        <td class="next-month">2</td>
+                        <td class="next-month">3</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <!--<div class="ring-left"></div>
+            <div class="ring-right"></div>-->
+
+
+
+
+        </div> <!-- end calendar-container -->
+
+        <div class="calendar-container">
+
+            <header>
+
+                <!--<div class="day">17</div>-->
+                <div class="month">september</div>
+
+            </header>
+
+            <table class="calendar">
+
+                <thead>
+
+                    <tr>
+
+                        <td>Mon</td>
+                        <td>Tue</td>
+                        <td>Wed</td>
+                        <td>Thu</td>
+                        <td>Fri</td>
+                        <td>Sat</td>
+                        <td>Sun</td>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td class="prev-month">28</td>
+                        <td class="prev-month">29</td>
+                        <td class="prev-month">30</td>
+                        <td class="prev-month">31</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+
+                    </tr>
+
+                    <tr>
+                        <td class="code1">4</td>
+                        <td class="code1">5</td>
+                        <td class="code1">6</td>
+                        <td class="code1">7</td>
+                        <td class="code1">8</td>
+                        <td class="code1">9</td>
+                        <td>10</td>
+
+                    </tr>
+
+                    <tr>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+
+                    </tr>
+
+                    <tr>
+                        <td class="code3 ">18</td>
+                        <td class="code3 ">19</td>
+                        <td class="code3 ">20</td>
+                        <td class="code3 ">21</td>
+                        <td class="code3 ">22</td>
+                        <td class="code3 ">23</td>
+                        <td>24</td>
+
+                    </tr>
+
+                    <tr>
+                        <td class="code3 ">25</td>
+                        <td class="code3 ">26</td>
+                        <td class="code3 ">27</td>
+                        <td class="code3 ">28</td>
+                        <td class="code3 ">29</td>
+                        <td class="code3 ">30</td>
+                        <td class="next-month">1</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <!--<div class="ring-left"></div>
+            <div class="ring-right"></div>-->
+
+
+
+
+        </div> <!-- end calendar-container -->
+
+        <div class="calendar-container">
+
+            <header>
+
+                <!--<div class="day">17</div>-->
+                <div class="month"> october</div>
+
+            </header>
+
+            <table class="calendar">
+
+                <thead>
+
+                    <tr>
+
+                        <td>Mon</td>
+                        <td>Tue</td>
+                        <td>Wed</td>
+                        <td>Thu</td>
+                        <td>Fri</td>
+                        <td>Sat</td>
+                        <td>Sun</td>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td class="prev-month">25</td>
+                        <td class="prev-month">26</td>
+                        <td class="prev-month">27</td>
+                        <td class="prev-month">28</td>
+                        <td class="prev-month">29</td>
+                        <td class="prev-month">30</td>
+                        <td>1</td>
+
+                    </tr>
+
+                    <tr>
+                        <td class="code3 ">2</td>
+                        <td class="code3 ">3</td>
+                        <td class="code3 ">4</td>
+                        <td class="code3 ">5</td>
+                        <td class="code3 ">6</td>
+                        <td class="code3 ">7</td>
+                        <td>8</td>
+                    </tr>
+
+                    <tr>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                    </tr>
+
+                    <tr>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                    </tr>
+
+                    <tr>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <!--<div class="ring-left"></div>
+            <div class="ring-right"></div>-->
+
+
+
+
+        </div> <!-- end calendar-container -->
+
+        <div class="calendar-container">
+
+            <header>
+
+                <!--<div class="day">17</div>-->
+                <div class="month">November</div>
+
+            </header>
+
+            <table class="calendar">
+
+                <thead>
+
+                    <tr>
+
+                        <td>Mon</td>
+                        <td>Tue</td>
+                        <td>Wed</td>
+                        <td>Thu</td>
+                        <td>Fri</td>
+                        <td>Sat</td>
+                        <td>Sun</td>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td class="prev-month">30</td>
+                        <td class="prev-month">31</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                    </tr>
+
+                    <tr>
+
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                    </tr>
+
+                    <tr>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                    </tr>
+
+                    <tr>
+
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                    </tr>
+
+                    <tr>
+
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>31</td>
+                        <td class="next-month">1</td>
+                        <td class="next-month">2</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <!--<div class="ring-left"></div>
+            <div class="ring-right"></div>-->
+
+
+
+
+        </div> <!-- end calendar-container -->
+
+
+
+
+    </div> <!-- end container -->
+
+
+
+    <div class=" navbar foot">
+        <div class="footmenu">
+
+            <a href="mentions.html" style="color: rgb(13, 13, 14); margin: 10px;"> MENTIONS LÉGALES</a>
+
+            <a style="color: rgb(13, 13, 14);margin: 10px;"> TOUT DROITS RESERVÉS©EMUNEZERO.COM 2023
+
+
+
+        </div>
+
+    </div>
+
+
+
+    <script src="move.js"> </script>
+</body>
+
+</html>
