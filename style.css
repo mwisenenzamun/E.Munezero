@@ -975,8 +975,7 @@ color: #000;
   .projet{
 
     margin-top: 50px;
-    border: solid 2px rgb(229, 229, 243);
-    
+    border: solid 1px rgb(119, 119, 121);    
     border-radius: 10px;
     width: 85%;
     
@@ -994,8 +993,7 @@ color: #000;
   .projet{
 
     margin-top: 50px;
-    border: solid 2px rgb(242, 242, 248);
-    
+    border: solid 1px rgb(119, 119, 121);    
     border-radius: 10px;
     width: 90%;
    
