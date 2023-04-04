@@ -38,6 +38,11 @@
   height: 120px ;
 }
 
+
+
+
+
+
 h1{
     
   color: #FFFFFF;
@@ -584,13 +589,18 @@ span{
 }
 /** logos*/
 
-@media (max-width: 600px) {
+@media (max-width: 340px) {
 
   .logos{
     display: none;
   }
 }
+@media (min-width: 340px) {
 
+  .logos2{
+    display: none;
+  }
+}
 
 
 
