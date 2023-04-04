@@ -1065,7 +1065,7 @@ color: #000;
 
 .timeline article {
   position: relative;
-  background: #eeeeee;
+  background: #cfd1d1;
   width: calc( 70% - 110px );
   padding: 10px;
 }
