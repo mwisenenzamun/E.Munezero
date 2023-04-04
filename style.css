@@ -602,6 +602,12 @@ span{
   }
 }
 
+.logos img{
+  clip-path: circle(59.1% at 50% 50%);}
+
+.logos2 img{
+  clip-path: circle(59.1% at 50% 50%);
+}
 
 
 .gauche{
