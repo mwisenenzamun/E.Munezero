@@ -192,6 +192,42 @@
     .maintenance {
         background-color: #ebacac;
     }
+
+    .hovertext {
+
+        border-bottom: 1px dotted black;
+        z-index: 1;
+    }
+
+    .hovertext:before {
+        content: attr(data-hover);
+        visibility: hidden;
+        opacity: 0;
+        width: 250px;
+        background-color: rgb(247, 247, 247);
+        color: rgb(26, 24, 24);
+        text-align: center;
+        border-radius: 5px;
+        padding: 5px 0;
+        transition: opacity 1s ease-in-out;
+
+        position: absolute;
+        z-index: 2;
+        right: 10%;
+
+    }
+
+    .hovertext:hover:before {
+        opacity: 1;
+        visibility: visible;
+        margin-top: -5%;
+    }
+
+
+    img:hover {
+        transform: scale(1.2);
+        /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
 </style>
 
 <body>
@@ -499,7 +535,10 @@
                         <td class="prev-month">29</td>
                         <td class="prev-month">30</td>
                         <td class="prev-month">31</td>
-                        <td>1</td>
+                        <td>1 <br>
+                            <span class="hovertext" data-hover=" Event 
+                            : Park at 12AM">Event</span>
+                        </td>
                         <td>2</td>
                         <td>3</td>
                         <td>4</td>
@@ -1022,6 +1061,7 @@
 
             <!--<div class="ring-left"></div>
             <div class="ring-right"></div>-->
+
 
 
 
