@@ -211,7 +211,7 @@ h2{
 }
 
 .pa {
-  width: 60%;
+  width: 80%;
   
 
 }
@@ -1013,7 +1013,7 @@ color: #000;
     border-radius: 10px;
     width: 90%;
    
-    display: flex;
+    display: none; /* voir ou pas voir */ 
     align-items: center;
     flex-direction: column;
     

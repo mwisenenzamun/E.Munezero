@@ -9,16 +9,68 @@
 </head>
 <style>
     body {
-        background-color: #F1F1F1;
+        background-color: #292626;
 
         /* #0097B2*/
         font-family: Rubik;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
 
     }
+
+    .propos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: url(profile3.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 800px;
+        margin-left: 100px;
+        margin-right: 100px;
+
+
+    }
+
+    .presentation {
+        background-color: #e5e7f1;
+        height: fit-content;
+        opacity: 0.8;
+        border-radius: 7px;
+        position: static;
+        width: fit-content;
+        margin: 10%;
+        padding: 10px;
+
+    }
+
+    .portfolio-box {
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-left: 100px;
+        margin-right: 100px;
+
+    }
+
+    .portfolio {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .formules {}
+
+
 
     .container {
         display: flex;
         flex-direction: column;
+
 
     }
 
@@ -26,7 +78,9 @@
 
 
     .main-head {
-        background: #0D1440;
+        background-image: url(profile3.jpg);
+        background-position: 0px;
+
         box-shadow: 0px 1px 10px -6px rgba(0, 0, 0, .15);
         padding: 20px;
         margin-bottom: 0;
@@ -42,7 +96,7 @@
     }
 
     .pricing-table {
-        background: #fff;
+        background: rgb(240, 240, 240);
         box-shadow: 0px 1px 10px -6px rgba(0, 0, 0, .15);
         padding: 40px;
         border-radius: 4px;
@@ -233,15 +287,14 @@
 
     h1 {
 
-        color: #ffffff;
+        color: #3b2222;
 
         font-size: 50px;
-        font-weight: 60;
-        font-stretch: condensed;
-        font-family: 'Antic Didone', serif;
-        width: fit-content;
+        font-weight: 40;
+
+
         margin-right: 30px;
-        text-decoration: underline;
+
 
 
 
@@ -357,9 +410,11 @@
     }
 
     .footmenu {
+        background-image: url(profile3.jpg);
         margin: 40px;
         display: flex;
         justify-content: center;
+
     }
 
     img:hover {
@@ -369,196 +424,94 @@
 </style>
 
 <body>
-    <!--<div style="display: flex; justify-content: center;">
-        <h1> <a style="color: rgb(29, 28, 28);" href="index.html"> E.MUNEZERO</a></h1>
-        <p class="copyright"> © </p>
-
-    </div>-->
     <div style="display: flex;justify-content: center;">
 
         <img style="width: 250px; border-radius: 30px;" src="logoEMserv.png" alt="">
     </div>
     <div style="display: flex; justify-content: center;">
-        <p style="  color: rgb(24, 22, 22);"> - LANCEMENT 2023 -</p>
+        <p style="  color: rgb(24, 22, 22);"> - 2024 -</p>
     </div>
-
-    <div style="margin-top:20px; display: flex; justify-content: center;">
+    <div style=" margin-top:20px; display: flex; justify-content: center;">
         <a href=" index.html"><button class="button-54" role="button">E.M ACCUEIl</button></a>
         <!--<a href="EMplanning.html"><button class="button-54" role="button">LE PLANNING</button></a>-->
     </div>
 
 
+
+
     <!-- HTML !-->
-    <div style="display: flex; justify-content: center; width: 80%; margin: 10%;">
+    <div class="propos">
 
 
 
-        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <div style="display: flex; justify-content: center;">
 
 
-            <div style="width: 90%;">
-                <h2>BIENVENUE</h2>
-                <div style="float: right; display: flex; flex-direction: column;">
+
+
+            <div class="presentation">
+
+
+                <div style=" width: 90%; ">
+
+                    <!--<div style="float: right; display: flex; flex-direction:row;">
                     <img src="Logo.HTML.png" alt="Avatar" style="width:40px;height:40px; margin: 10px; ">
                     <img src="Logo.CSS.png" alt="Avatar" style="width:40px;height:40px; margin: 10px; ">
                     <img src="Logo.js.png" alt="Avatar" style="width:40px;height:40px; margin: 10px; ">
-                </div>
-                <p> Je m'appelle Esther, <br>
-                    <br> Je suis une conceptrice de sites internet spécialisée dans l'utilisation des langages HTML, CSS
-                    et JavaScript.
-                    <br>
-                    <br> Voici une liste des services que je propose :
-                </p>
-            </div>
-
-            <!--
-            <div style="width: 50%; margin-top: 30px;">
-                <h2> La création de votre site web.</h2>
-                <div class="palist">
-                    <h3> Etape 1. Rendez-vous de préparation.</h3>
-                    Le rendez-vous de préparation sert à identifier vos besoins,
-                    et à définir toutes les bases de votre site-web.
-
-
-                </div>
-                <div class="palist">
-                    <h3>Etape 2. La Réalisation</h3>
-                    La réalisation est une période de 2 à 3 semaine pour réaliser l'entiérté de votre projet site-web.
-                    <br>
-                    Il n'est pas possible de commencer un projet sans être passé par l'étape 1.
-
-
-                </div>
-            </div>
-
-            <div style="width: 50%; margin-top: 30px;">
-                <h2> La maintenance de votre site web.</h2>
-                <div class="palist">
-                    <h3> Engagement de 3 mois </h3>
-                    La maintenance se fait par bloc de 3 mois, avec la possibilité de passer d'un tarif à l'autre,
-                    après chaque mois. <br> <br> Les 3 mois peuvent ne pas être consécutifs.
-
-
-
-                </div>
-
-            </div>
-
-            <div style="width: 80% ; float: right; margin-top: 30px;">
-                <h2> Prendre un rendez-vous</h2>
-                <div>
-                    Pour toute personne résident en belgique, <br> le premier rendez-vous se fait en présentiel.
-                    <br>
-                    <br> Après avoir choisit
-                </div>
-                <div class="palists">
-                    la prériode de préparation, voir le planning.
-
-                </div>
-                <div class="palists">
-                    la prériode de réalisation, voir le planning.
-
-                </div>
-
-                <div class="palists">
-                    la/les(s) formule(s), voir ci-dessous.
-
-                </div>
-
-                <div>
-                    Envoi-moi un message via Instagram ou email,
-                    <br> en me mentionnant tes choix.
-
-                </div>
-
-
-            </div>
-
-
-            <div style="display: flex; justify-content: center;align-items: center; margin: 20px;">
-
-                <a style="height: fit-content; margin-right: 30px; " href="EMplanning.html"> <button class="button-74"
-                        role="button"> LE PLANNING</button></a>
-
-                <a href="https://www.instagram.com/esther.munezero/" style="width: fit-content; height: fit-content;">
-                    <img src="logoinsta2.png" alt="" style="width: 30px; margin: 30px;"> </a>
-                <a href="mailto:estmwis@hotmail.com" style="width: fit-content; height: fit-content;"> <img
-                        src="logomail2.png" alt="" style="width: 30px; margin: 30px;"> </a>
-            </div>
-
-
-
-            <div style="display: none; flex-wrap: wrap; width: 70%;">
-                <h2>Parain/Maraine</h2>
-
-                <div style="margin: 15px; width: 45%;">
-                    <h2 style="color: #e4b945;">Réduction -50%* <br> sur tout les services</h2>
-                    <h3> Comment le devenir? </h3>
-
-
-                    <div class="palist">
-                        1 - Devient client, .
-
-                    </div>
-                    <div class="palist">
-                        2 - La personne parainer obtiendra une réduction de
-                        <br> - 25% sur tout les services lors de son
-                        engagement.
-
-                    </div>
-                    <div class="palist">
-                        3 - Vous recevez une réduction de -50% sur tout les services.
-                    </div>
-                    </p>
-
-                    <p style="color: #8154fe; font-size: 12px;">
-                        *La réduction est applicable au moment où le
-                        parainer/la marainer
-                        s'engage.
-                        <br>
-                        *Pour la maintenance de site-web la réduction s'applique pendant 3 mois.
-
+                </div>!-->
+                    <p> Je m'appelle Esther, <br>
+                        <br> Je suis une conceptrice de sites internet spécialisée dans l'utilisation des langages HTML,
+                        CSS
+                        et JavaScript.
 
                     </p>
 
+                    <p> Conctacte moi via : </p>
+                    <div>
+                        <a href="https://www.instagram.com/esther.munezero/"> <img src="logoinsta2.png" alt=""
+                                style="width: 20px; margin: 2%; "> </a>
+                        <a href="mailto:estmwis@hotmail.com"> <img src="logomail2.png" alt=""
+                                style="width: 20px; margin: 2%; ">
+                        </a>
+                    </div>
                 </div>
-                <div style="margin: 15px; width: 45%;">
-                    <h2 style="color: #e47745;"> Réduction - 65%* <br> sur tout les services</h2>
-                    <h3> Comment le devenir? </h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container portfolio-box " style="display: flex; justify-content: center">
 
 
-                    <div class="palist">
-                        1 - Devenir client. (minimum 1 service)
-                    </div>
-                    <div class="palist"> 2- Les 2 personnes parainer obtiendront une réduction de - 50% sur tout les
-                        services (2 fomules max)
-
-                    </div>
-                    <div class="palist">
-                        3 - Vous recevez une réduction de -65%sur tout les services (2 fomules max).
-                    </div>
-                    <p style="color: #8154fe; font-size: 12px;"> *La réduction applicable au moment où le
-                        parainer/la marainer
-                        s'engage. </p>
-                </div>
-            </div> -->
-
+        <div class="col-md-12 mb-5">
+            <div>
+                <h2 class="main-head">Portfolio</h2>
+            </div>
         </div>
 
 
 
+        <div>
 
+
+            <div class="portfolio" style=" display: flex; justify-content: center;">
+
+                <img src="portfolio 1.jpg" alt="" style="width: 250px; margin: 10px;">
+                <img src="portfolio 2.jpg" alt="" style="width: 350px; margin: 10px;">
+                <img src="portfolio 3.jpg" alt="" style="width: 350px; margin: 10px;">
+            </div>
+
+        </div>
 
     </div>
 
 
 
 
+    <div class="container formules">
 
-
-
-
-    <div class="container">
         <div class="col-md-12 mb-5">
             <h2 id="formules" class="main-head">Formules, Creation Site Web </h2>
         </div>
@@ -673,7 +626,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container maintenance">
         <div class="col-md-12 mb-5">
             <div>
                 <h2 class="main-head">Maintenance de site-web - Priorité aux clients</h2>
@@ -791,11 +744,14 @@
         </div>
     </div>
 
+
+
+
     <div class="footmenu">
 
-        <a href="mentions.html" style="color: rgb(13, 13, 14); margin: 10px;"> MENTIONS LÉGALES</a>
+        <a href="mentions.html" style="color: rgb(184, 184, 184); margin: 10px;"> MENTIONS LÉGALES</a>
 
-        <a style="color: rgb(13, 13, 14);margin: 10px;"> TOUT DROITS RESERVÉS©EMUNEZERO.COM 2023
+        <a style="color: rgb(147, 147, 148);margin: 10px;"> TOUT DROITS RESERVÉS©EMUNEZERO.COM 2024
 
 
 
